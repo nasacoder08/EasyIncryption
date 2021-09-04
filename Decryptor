@@ -196,40 +196,40 @@ final=final.concat("a")
    }
      
 if(arrayj[iiii]== b){
-final=final.concat("b")
+final=final.concat("c")
    console.log("long")
   
 }
      if(arrayj[iiii]== c){
    
-final=final.concat("c")
+final=final.concat("b")
    console.log("long")
    
    }
      if(arrayj[iiii]== d){
    
-final=final.concat("d")
+final=final.concat("f")
    console.log("long")
   
    }
   if(arrayj[iiii]== e){
    
-final=final.concat("e")
+final=final.concat("d")
    console.log("long")
   
    }  if(arrayj[iiii]== f){
    
-final=final.concat("f")
+final=final.concat("e")
    console.log("long")
    
    }  if(arrayj[iiii]== g){
    
-final=final.concat("g")
+final=final.concat("j")
    console.log("long")
    } 
 if(arrayj[iiii]== h){
    
-final=final.concat("h")
+final=final.concat("g")
    console.log("long")
    } 
   if(arrayj[iiii]== i){
@@ -237,7 +237,7 @@ final=final.concat("i")
    console.log("long")
    }  if(arrayj[iiii]== j){
    
-final=final.concat("j")
+final=final.concat("h")
    console.log("long")
    }  if(arrayj[iiii]== k){
    
@@ -245,65 +245,65 @@ final=final.concat("k")
    console.log("long")
    }  if(arrayj[iiii]== l){
    
-final=final.concat("l")
+final=final.concat("m")
    console.log("long")
    }
      if(arrayj[iiii]== m){
    
-final=final.concat("m")
+final=final.concat("n")
    console.log("long")
    }
      if(arrayj[iiii]== n){
    
-final=final.concat("n")
+final=final.concat("l")
    console.log("long")
    }
 if(arrayj[iiii]== o){
    
-final=final.concat("o")
+final=final.concat("r")
    console.log("long")
    }
   if(arrayj[iiii]== p){
    
-final=final.concat("p")
+final=final.concat("o")
    console.log("long")
    }  if(arrayj[iiii]== q){
 final=final.concat("q")
    console.log("long")
    }  if(arrayj[iiii]== r){
    
-final=final.concat("r")
+final=final.concat("p")
    console.log("long")
    }
      if(arrayj[iiii]== s){
    
-final=final.concat("s")
+final=final.concat("t")
    console.log("long")
    }
      if(arrayj[iiii]== t){
    
-final=final.concat("t")
+final=final.concat("w")
    console.log("long")
    }
    if(arrayj[iiii]== u){
    
-final=final.concat("u")
+final=final.concat("v")
    console.log("long")
    }
      if(arrayj[iiii]== v){
    
-final=final.concat("v")
+final=final.concat("u")
    console.log("long")
    } 
    
     if(arrayj[iiii]== w){
    
-final=final.concat("w")
+final=final.concat("s")
    console.log("long")
    }  
 if(arrayj[iiii]== x){
    
-final=final.concat("x")
+final=final.concat("z")
    console.log("long")
    }  if(arrayj[iiii]== y){
    
@@ -311,12 +311,12 @@ final=final.concat("y")
    console.log("long")
    }  if(arrayj[iiii]== z){
    
-final=final.concat("z")
+final=final.concat(" ")
    console.log("long")
    }
  if(arrayj[iiii]== sp){
    
-final=final.concat(" ")
+final=final.concat("x")
    console.log("long")
    }
 
