@@ -1,0 +1,342 @@
+fs = require("fs");
+let key ="";
+let final = "";
+fs.readFile('DecryptKey.txt', function (err, key) {
+key= key.toString()
+fs.readFile('Input.txt', function (err, input) {
+input= input.toString();
+key = key.toString();
+
+
+
+a=key.charAt(0) + key.charAt(1);
+b=key.charAt(2) + key.charAt(3);
+c=key.charAt(4) + key.charAt(5);
+d=key.charAt(6) + key.charAt(7);
+e=key.charAt(8) + key.charAt(9);
+f=key.charAt(10) + key.charAt(11);
+g=key.charAt(12) + key.charAt(13);
+h=key.charAt(14) + key.charAt(15);
+i=key.charAt(16) + key.charAt(17);
+j=key.charAt(18) + key.charAt(19);
+k=key.charAt(20) + key.charAt(21);
+l=key.charAt(22) + key.charAt(23);
+m=key.charAt(24) + key.charAt(25);
+n=key.charAt(26) + key.charAt(27);
+o=key.charAt(28) + key.charAt(29);
+p=key.charAt(30) + key.charAt(31);
+q=key.charAt(32) + key.charAt(33);
+r=key.charAt(34) + key.charAt(35);
+s=key.charAt(36) + key.charAt(37);
+t=key.charAt(38) + key.charAt(39);
+u=key.charAt(40) + key.charAt(41);
+v=key.charAt(42) + key.charAt(43);
+w=key.charAt(44) + key.charAt(45);
+x=key.charAt(46) + key.charAt(47);
+y=key.charAt(48) + key.charAt(49);
+z=key.charAt(50) + key.charAt(51);
+sp = key.charAt(52) + key.charAt(53);
+     
+aa = input.charAt(0)+input.charAt(1);  
+
+bb = input.charAt(2)+input.charAt(3); 
+
+cc = input.charAt(4)+input.charAt(5); 
+dd = input.charAt(6)+input.charAt(7); 
+ee = input.charAt(8)+input.charAt(9); 
+ff = input.charAt(10)+input.charAt(11);
+gg = input.charAt(12)+input.charAt(13) ;
+hh= input.charAt(14)+input.charAt(15);      
+ii = input.charAt(16)+input.charAt(17); 
+jj = input.charAt(18)+input.charAt(19); 
+kk = input.charAt(20)+input.charAt(21); 
+ll = input.charAt(22)+input.charAt(23); 
+mm = input.charAt(24)+input.charAt(25); 
+nn = input.charAt(26)+input.charAt(27);
+oo = input.charAt(28)+input.charAt(29);      
+pp = input.charAt(30)+input.charAt(31); 
+qq = input.charAt(32)+input.charAt(33); 
+rr = input.charAt(34)+input.charAt(35); 
+ss = input.charAt(36)+input.charAt(37) ;
+tt = input.charAt(38)+input.charAt(39) ;
+uu = input.charAt(40)+input.charAt(41); 
+vv= input.charAt(42) +input.charAt(43);      
+ww = input.charAt(44)+input.charAt(45); 
+xx = input.charAt(46)+input.charAt(47); 
+yy = input.charAt(48)+input.charAt(49) ;
+zz = input.charAt(50)+input.charAt(51); 
+za = input.charAt(52)+input.charAt(53);
+zb = input.charAt(54)+input.charAt(55);
+zc = input.charAt(56)+input.charAt(57);
+zd = input.charAt(58)+input.charAt(59);
+ze = input.charAt(60)+input.charAt(61);
+zf = input.charAt(62)+input.charAt(63);
+zg = input.charAt(64)+input.charAt(65);
+zh = input.charAt(66)+input.charAt(67);
+zi = input.charAt(68)+input.charAt(69);
+zj = input.charAt(70)+input.charAt(71);
+zk = input.charAt(72)+input.charAt(73); 
+zl = input.charAt(74)+input.charAt(75);
+zm = input.charAt(76)+input.charAt(77);
+zn = input.charAt(78)+input.charAt(79);
+zo = input.charAt(80)+input.charAt(81);
+zp = input.charAt(82)+input.charAt(83);
+zq = input.charAt(84)+input.charAt(85);
+zr = input.charAt(86)+input.charAt(87);
+zs = input.charAt(88)+input.charAt(89);
+zt = input.charAt(90)+input.charAt(91);
+zu = input.charAt(92)+input.charAt(93);
+zv = input.charAt(94)+input.charAt(95); 
+zw = input.charAt(96)+input.charAt(97); 
+zx = input.charAt(98)+input.charAt(99); 
+zy = input.charAt(100)+input.charAt(101);
+zza = input.charAt(102)+input.charAt(103) ;
+zzb= input.charAt(104)+input.charAt(105);      
+zzc = input.charAt(106)+input.charAt(107); 
+zzd = input.charAt(108)+input.charAt(109); 
+zze= input.charAt(110)+input.charAt(111); 
+zzf = input.charAt(112)+input.charAt(113); 
+zzg = input.charAt(114)+input.charAt(115); 
+zzh = input.charAt(116)+input.charAt(117);
+zzi = input.charAt(118)+input.charAt(119);      
+zzj = input.charAt(120)+input.charAt(121); 
+zzk= input.charAt(122)+input.charAt(123); 
+zzl= input.charAt(124)+input.charAt(125); 
+zzm= input.charAt(126)+input.charAt(127) ;
+zzn= input.charAt(128)+input.charAt(129) ;
+zzo= input.charAt(130)+input.charAt(131); 
+zzp= input.charAt(132) +input.charAt(133);      
+zzq= input.charAt(134)+input.charAt(135); 
+zzr = input.charAt(136)+input.charAt(137); 
+zzs= input.charAt(138)+input.charAt(139) ;
+zzt= input.charAt(140)+input.charAt(141); 
+zzu= input.charAt(142)+input.charAt(143);
+zzv= input.charAt(144)+input.charAt(145);
+zzw= input.charAt(146)+input.charAt(147);
+zzx= input.charAt(148)+input.charAt(149);
+zzy= input.charAt(150)+input.charAt(151);
+zzz= input.charAt(152)+input.charAt(153);
+zzzz= input.charAt(154)+input.charAt(155);
+zzzzz= input.charAt(156)+input.charAt(157);
+aaa= input.charAt(158)+input.charAt(159);
+aaaa= input.charAt(160)+input.charAt(161);
+bbb= input.charAt(162)+input.charAt(163);
+bbbb= input.charAt(164)+input.charAt(165);
+ccc= input.charAt(166)+input.charAt(167);
+cccc= input.charAt(168)+input.charAt(169);
+ddd= input.charAt(170)+input.charAt(171);
+dddd= input.charAt(172)+input.charAt(173);
+eee= input.charAt(174)+input.charAt(175);
+eeee= input.charAt(176)+input.charAt(177);
+fff= input.charAt(178)+input.charAt(179);
+ffff= input.charAt(180)+input.charAt(181);
+ggg= input.charAt(182)+input.charAt(183);
+gggg= input.charAt(184)+input.charAt(185);
+hhh= input.charAt(186)+input.charAt(187);
+hhhh= input.charAt(188)+input.charAt(189);
+iii= input.charAt(190)+input.charAt(191);
+iiii= input.charAt(192)+input.charAt(193);
+jjj= input.charAt(194)+input.charAt(195);
+jjjj= input.charAt(196)+input.charAt(197);
+kkk= input.charAt(198)+input.charAt(199);
+kkkk= input.charAt(200)+input.charAt(201);
+lll= input.charAt(202)+input.charAt(203);
+llll= input.charAt(204)+input.charAt(205);
+mmm= input.charAt(206)+input.charAt(207);
+mmmm= input.charAt(208)+input.charAt(209);
+nnn= input.charAt(210)+input.charAt(211);
+nnnn= input.charAt(212)+input.charAt(213);
+ooo= input.charAt(214)+input.charAt(215);
+oooo= input.charAt(216)+input.charAt(217);
+ppp= input.charAt(218)+input.charAt(219);
+pppp= input.charAt(220)+input.charAt(221);
+qqq= input.charAt(222)+input.charAt(223);
+qqqq= input.charAt(224)+input.charAt(225);
+rrr= input.charAt(226)+input.charAt(227);
+rrrr= input.charAt(228)+input.charAt(229);
+sss= input.charAt(230)+input.charAt(231);
+ssss= input.charAt(232)+input.charAt(233);
+ttt= input.charAt(234)+input.charAt(235);
+tttt= input.charAt(236)+input.charAt(237);
+uuu= input.charAt(238)+input.charAt(239);
+uuuu= input.charAt(240)+input.charAt(241);
+vvv= input.charAt(242)+input.charAt(243);
+vvvv= input.charAt(244)+input.charAt(245);
+www= input.charAt(246)+input.charAt(247);
+wwww= input.charAt(248)+input.charAt(249);
+xxx= input.charAt(250)+input.charAt(251);
+xxxx= input.charAt(252)+input.charAt(253);
+yyy= input.charAt(254)+input.charAt(255);
+yyyy= input.charAt(256)+input.charAt(257);
+aaaaa= input.charAt(258)+input.charAt(259);
+aaaaaa= input.charAt(260)+input.charAt(261);
+bbbbb= input.charAt(262)+input.charAt(263);
+ccccc= input.charAt(264)+input.charAt(265);
+ddddd= input.charAt(266)+input.charAt(267);
+eeeee= input.charAt(268)+input.charAt(269);
+fffff= input.charAt(270)+input.charAt(271);
+ggggg= input.charAt(272)+input.charAt(273);
+hhhhh= input.charAt(274)+input.charAt(275);
+iiiii= input.charAt(276)+input.charAt(277);
+jjjjj= input.charAt(278)+input.charAt(279);
+kkkkk= input.charAt(280)+input.charAt(281);
+lllll= input.charAt(282)+input.charAt(283);
+mmmmm= input.charAt(284)+input.charAt(285);
+nnnnn= input.charAt(286)+input.charAt(287);
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+var arrayj = [aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm,nn,oo,pp,qq,rr,ss,tt,uu,vv,ww,xx,yy,zz,za,zb,zc,zd,ze,zf,zg,zh,zi,zj,zk,zl,zm,zn,zo,zp,zq,zr,zs,zt,zu,zv,zw,zx,zy,zza,zzb,zzc,zzd,zze,zzf,zzg,zzh,zzi,zzj,zzk,zzl,zzm,zzn,zzo,zzp,zzq,zzr,zzs,zzt,zzu,zzv,zzw,zzx,zzy,zzz,zzzz,zzzzz,aaa,aaaa,bbb,bbbb,ccc,cccc,ddd,dddd,eee,eeee,fff,ffff,ggg,gggg,hhh,hhhh,iii,iiii,jjj,jjjj,kkk,kkkk,lll,llll,mmm,mmmm,nnn,nnnn,ooo,oooo,ppp,pppp,qqq,qqqq,rrr,rrrr,sss,ssss,ttt,tttt,uuu,uuuu,vvv,vvvv,www,wwww,xxx,xxxx,yyy,yyyy,aaaaa,aaaaaa,bbbbb,ccccc,ddddd,eeeee,fffff,ggggg,hhhhh,iiiii,jjjjj,kkkkk,lllll,mmmmm,nnnnn]
+for (var iiii = 0; iiii < input.length; iiii++) {
+   if(arrayj[iiii]== a){
+   
+final=final.concat("a")
+   console.log("long")
+
+   }
+     
+if(arrayj[iiii]== b){
+final=final.concat("b")
+   console.log("long")
+  
+}
+     if(arrayj[iiii]== c){
+   
+final=final.concat("c")
+   console.log("long")
+   
+   }
+     if(arrayj[iiii]== d){
+   
+final=final.concat("d")
+   console.log("long")
+  
+   }
+  if(arrayj[iiii]== e){
+   
+final=final.concat("e")
+   console.log("long")
+  
+   }  if(arrayj[iiii]== f){
+   
+final=final.concat("f")
+   console.log("long")
+   
+   }  if(arrayj[iiii]== g){
+   
+final=final.concat("g")
+   console.log("long")
+   } 
+if(arrayj[iiii]== h){
+   
+final=final.concat("h")
+   console.log("long")
+   } 
+  if(arrayj[iiii]== i){
+final=final.concat("i")
+   console.log("long")
+   }  if(arrayj[iiii]== j){
+   
+final=final.concat("j")
+   console.log("long")
+   }  if(arrayj[iiii]== k){
+   
+final=final.concat("k")
+   console.log("long")
+   }  if(arrayj[iiii]== l){
+   
+final=final.concat("l")
+   console.log("long")
+   }
+     if(arrayj[iiii]== m){
+   
+final=final.concat("m")
+   console.log("long")
+   }
+     if(arrayj[iiii]== n){
+   
+final=final.concat("n")
+   console.log("long")
+   }
+if(arrayj[iiii]== o){
+   
+final=final.concat("o")
+   console.log("long")
+   }
+  if(arrayj[iiii]== p){
+   
+final=final.concat("p")
+   console.log("long")
+   }  if(arrayj[iiii]== q){
+final=final.concat("q")
+   console.log("long")
+   }  if(arrayj[iiii]== r){
+   
+final=final.concat("r")
+   console.log("long")
+   }
+     if(arrayj[iiii]== s){
+   
+final=final.concat("s")
+   console.log("long")
+   }
+     if(arrayj[iiii]== t){
+   
+final=final.concat("t")
+   console.log("long")
+   }
+   if(arrayj[iiii]== u){
+   
+final=final.concat("u")
+   console.log("long")
+   }
+     if(arrayj[iiii]== v){
+   
+final=final.concat("v")
+   console.log("long")
+   } 
+   
+    if(arrayj[iiii]== w){
+   
+final=final.concat("w")
+   console.log("long")
+   }  
+if(arrayj[iiii]== x){
+   
+final=final.concat("x")
+   console.log("long")
+   }  if(arrayj[iiii]== y){
+   
+final=final.concat("y")
+   console.log("long")
+   }  if(arrayj[iiii]== z){
+   
+final=final.concat("z")
+   console.log("long")
+   }
+ if(arrayj[iiii]== sp){
+   
+final=final.concat(" ")
+   console.log("long")
+   }
+
+////Needs to be done if(aa===a) all the way through if (aa === z) then aa==a through zz=z
+
+
+
+final=final.toString();
+fs.writeFile('Output.txt', final, (err) => {
+if (err) throw err;
+})
+if (err) {
+         return console.error(err);
+      }
+}})})
+
+
+
+
+
+
+
+
