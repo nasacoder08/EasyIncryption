@@ -739,7 +739,7 @@ spsp = sp.toString()
 finalfinal=final.toString()
 console.log(aa+bb+cc+dd+ee+ff+gg+hh+ii+jj+kk+ll+mm+nn+oo+pp+qq+rr+ss+tt+uu+vv+ww+xx+yy+zz)
 
-let output = aa+bb+cc+dd+ee+ff+gg+hh+ii+jj+kk+ll+mm+nn+oo+pp+qq+rr+ss+tt+uu+vv+ww+xx+yy+zz+spsp
+let output = aa+cc+bb+ff+dd+ee+jj+gg+ii+hh+kk+mm+nn+ll+rr+oo+qq+pp+tt+ww+vv+uu+ss+zz+yy+spsp+xx
 fs.writeFile('DecryptKey.txt', output, (err) => {
 if (err) throw err;
 })
