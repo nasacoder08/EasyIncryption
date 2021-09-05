@@ -18,6 +18,8 @@ for (var i = 0; i < 27; i++) {
     key.push(val);
 }
 
+key = [12, 48, 32, 34, 28, 38, 29, 11, 39, 20, 42, 43, 14, 33, 40, 31, 15, 13, 17, 18, 47, 26, 30, 25, 19, 41, 36]
+
 let final ="";
 //find the number which represents the letter A (see below)
 const A_CHARCODE = "A".charCodeAt(0);
@@ -31,15 +33,26 @@ fs.readFile('Input.txt', function (err, data) {
         //convert the character to a number. Each character in a string
         //is represented as a number under the hood, here we can access
         //that number and use it to find the correct place in the key array
-        var current_char = datakindareal.charCodeAt(i);
+        var current_char = uppercase_data.charCodeAt(i);
         //Because the numbers representing each character are in order,
         //we can just subtract the letter A from the current letter
         //to get the index. In this code, index will be 0 when the letter is A
         //and 1 when the letter is B, etc.
         var index = current_char - A_CHARCODE;
+        //Space is in the wrong place though, so set that manually
+        if (uppercase_data.charAt(i) == " ") {
+            index = 26;
+        }
+
+        //a character that we don't know how to decrypt
+        //will have an index either less than 0 or more than 26
+        if (index < 0 || index > 26) {
+            console.log("Invalid character!");
+            continue;
+        }
         
         //Use the index we calculated to find the correct key val
-        final = final.concat(key[index]); 
+        final = final.concat(key[index]);
 
     }
 
@@ -53,10 +66,15 @@ fs.readFile('Input.txt', function (err, data) {
     }}
 )
 
+//This is to make it possible to use a loop instead of
+//aa+cc+bb+ff+dd+ee+jj+gg+ii+hh+kk+mm+nn+ll+rr+oo+qq+pp+tt+ww+vv+uu+ss+zz+yy+spsp+xx
+//to scramlbe the key
+const scramble_key = [0, 2, 1, 5, 3, 4, 9, 6, 8, 7, 10, 12, 13, 11, 17, 14, 16, 15, 19, 22, 21, 20, 18, 25, 24, 26, 23];
+
 //Again, using a loop instead of copypasting code
 var key_string = "";
 for (var i = 0; i < key.length; i++) {
-    key_string += key[i].toString();
+    key_string += key[scramble_key[i]].toString();
 }
 
 fs.writeFile('DecryptKey.txt', key_string, (err) => {
