@@ -1,0 +1,144 @@
+const fs = require('fs')
+
+fs.writeFile('Output.txt', "", (err) => {
+    if (err) throw err;
+})
+
+//Use an array and a loop to generate the key
+key = []
+for (var i = 0; i < 47; i++) {
+    var val;
+    //generate a new `val` if it is not unique
+    //https://www.w3schools.com/jsref/jsref_dowhile.asp
+    do {
+        val = Math.floor(Math.random() * 40 + 10);
+    } while (key.includes(val));
+
+    //val is unique, add to array
+    key.push(val);
+}
+
+let final ="";
+//find the number which represents the letter A (see below)
+const A_CHARCODE = "A".charCodeAt(0);
+fs.readFile('Input.txt', function (err, data) {
+    //naming of variables is very important
+    //use descriptive names
+    var uppercase_data = data.toString().toUpperCase();
+    for (var i = 0; i < data.length; i++) {
+        
+        //Because the key is now an array rather than a bunch of numbers
+        //convert the character to a number. Each character in a string
+        //is represented as a number under the hood, here we can access
+        //that number and use it to find the correct place in the key array
+        var current_char = uppercase_data.charCodeAt(i);
+        //Because the numbers representing each character are in order,
+        //we can just subtract the letter A from the current letter
+        //to get the index. In this code, index will be 0 when the letter is A
+        //and 1 when the letter is B, etc.
+        var index = current_char - A_CHARCODE;
+        //Space is in the wrong place though, so set that manually
+        
+        ///////////////////NEW CODE
+        if (uppercase_data.charAt(i) == " ") {
+            index = 26;
+        }
+         if (uppercase_data.charAt(i) == "1") {
+            index = 27;
+        }
+        if (uppercase_data.charAt(i) == "2") {
+            index = 28;
+        }
+        if (uppercase_data.charAt(i) == "3") {
+            index = 29;
+        }
+        if (uppercase_data.charAt(i) == "4") {
+            index = 30;
+        }
+        if (uppercase_data.charAt(i) == "5") {
+            index = 31;
+        }
+        if (uppercase_data.charAt(i) == "6") {
+            index = 32;
+        }
+        if (uppercase_data.charAt(i) == "7") {
+            index = 33;
+        }
+        if (uppercase_data.charAt(i) == "8") {
+            index = 34;
+        }
+        if (uppercase_data.charAt(i) == "9") {
+            index = 35;
+        }
+        if (uppercase_data.charAt(i) == "0") {
+            index = 36;
+        }
+        if (uppercase_data.charAt(i) == "!") {
+            index = 37;
+        }
+        if (uppercase_data.charAt(i) == "@") {
+            index = 38;
+        }
+        if (uppercase_data.charAt(i) == "#") {
+            index = 39;
+        }
+         if (uppercase_data.charAt(i) == "$") {
+            index = 40;
+        } 
+        if (uppercase_data.charAt(i) == "%") {
+            index = 41;
+        } 
+        if (uppercase_data.charAt(i) == "^") {
+            index = 42;
+        }
+        if (uppercase_data.charAt(i) == "&") {
+            index = 43;
+        }
+        if (uppercase_data.charAt(i) == "*") {
+            index = 44;
+        }
+        if (uppercase_data.charAt(i) == "(") {
+            index = 45;
+        }
+         if (uppercase_data.charAt(i) == ")") {
+            index = 46;
+        }
+       
+
+        //a character that we don't know how to decrypt
+        //will have an index either less than 0 or more than 26
+        if (index < 0 || index > 46) {
+            console.log("Invalid character!");
+            continue;
+        }
+
+        
+        //Use the index we calculated to find the correct key val
+        final = final.concat(key[index]);
+
+    }
+
+    //Only write once at the end
+    //more efficient
+    fs.writeFile('Output.txt', final, (err) => {
+        if (err) throw err;
+    })
+    if (err) {
+        return console.error(err);
+    }})
+
+
+//This is to make it possible to use a loop instead of
+//aa+cc+bb+ff+dd+ee+jj+gg+ii+hh+kk+mm+nn+ll+rr+oo+qq+pp+tt+ww+vv+uu+ss+zz+yy+spsp+xx
+//to scramlbe the key
+const scramble_key = [0, 2, 1, 5, 3, 4, 9, 6, 8, 7, 10, 12, 13, 11, 17, 14, 16, 15, 19, 22, 21, 20, 18, 25, 24, 26, 23,27,28,29,30,31,32,33,34,35,36];
+
+//Again, using a loop instead of copypasting code
+var key_string = "";
+for (var i = 0; i < key.length; i++) {
+    key_string += key[scramble_key[i]].toString();
+}
+
+fs.writeFile('DecryptKey.txt', key_string, (err) => {
+    if (err) throw err;
+})
