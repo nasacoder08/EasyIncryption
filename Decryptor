@@ -1,20 +1,30 @@
 fs = require("fs");
-let key ="";
 let final = "";
-fs.readFile('DecryptKey.txt', function (err, key) {
-    key = key.toString()
-    fs.readFile('Input.txt', function (err, input) {
-        input= input.toString();
-        key = key.toString();
+fs.readFile('DecryptKey.txt', function (err, key_) {
+    if (err) {
+        return console.error(err);
+    }
+    let key = key_.toString()
 
+    fs.readFile('Input.txt', function (err, input_) {
+        if (err) {
+            return console.error(err);
+        }
+        let input = input_.toString();
         //Instead of assigning 1000000000000 or more variables,
         //do it in a loop and push (add to the end of) the array
         //instead of constructing the array from multiple variables
-        var arrayj = [];
-        for (var i = 0; i < 287; i++) {
-             arrayj.push(key.charAt(i) + key.charAt(i + 1));
+        //also variable naming is important!
+        let split_input = [];
+        let split_key = [];
+        for (let i = 0; i < input.length; i += 2) {
+             split_input.push(input.charAt(i) + input.charAt(i + 1));
         }
-
+        
+        for (let i = 0; i < key.length; i += 2) {
+            split_key.push(key.charAt(i) + key.charAt(i + 1));
+        }
+                
         //this basically allows all of the lines like
         //if (arrayj[iiii] == a) { final = final.concat("a") }
         //to be replaced with a loop. This drastically improves
@@ -24,15 +34,15 @@ fs.readFile('DecryptKey.txt', function (err, key) {
             "h", "k", "m", "n", "l", "r", "o", "q", "p",
             "t", "w", "v", "u", "s", "z", "y", " ", "x"
         ];
-
-
-        for (var i = 0; i < input.length; i++) {
+        
+        
+        for (let i = 0; i < split_input.length; i++) {
             //Use a loop to go through all the combinations
             //using the index_to_letter array to get the
             //correct letter for the index
-            for (var j = 0; j < index_to_letter.length; j++) {
-                if(arrayj[i] == arrayj[j]) {
-                    final = final.concat(index_to_letter[j])
+            for (let j = 0; j < split_key.length; j++) {
+                if (split_input[i] == split_key[j]) {
+                    final += index_to_letter[j];
                 }
             }
             
@@ -40,10 +50,10 @@ fs.readFile('DecryptKey.txt', function (err, key) {
             fs.writeFile('Output.txt', final, (err) => {
                 if (err) throw err;
             })
-
+        
             if (err) {
-                     return console.error(err);
+                return console.error(err);
             }
         }
-    })
-})
+    });
+});
